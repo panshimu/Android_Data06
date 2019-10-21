@@ -1,0 +1,1 @@
+include ':app', ':miaozi_pay', ':pay_annotations', ':pay_compiler'

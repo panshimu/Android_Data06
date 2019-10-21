@@ -1,0 +1,18 @@
+apply plugin: 'java-library'
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.google.auto.service:auto-service:1.0-rc6'
+    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc6'
+    implementation 'net.ltgt.gradle.incap:incap-processor:0.2'
+    implementation 'com.squareup:javapoet:1.11.1'
+    implementation project(path: ':pay_annotations')
+
+}
+tasks.withType(JavaCompile){
+    options.encoding='UTF-8'
+}
+sourceCompatibility = "7"
+targetCompatibility = "7"
